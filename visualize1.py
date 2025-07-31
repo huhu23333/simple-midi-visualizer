@@ -173,6 +173,7 @@ def draw_piano(image, glow_mask, particle_masks, state_frame, on_color):
                 pt1 = (x_left, screen[1]-white_key_height-1)
                 pt2 = (x_right, screen[1]-white_key_height+black_key_height-1)
                 cv2.rectangle(mask_temp, pt1=pt1, pt2=pt2, color=0, thickness=-1)
+                note -= 1
             else:
                 x_left = int(note * note_to_x_ratio_total)
                 x_right = int((note + 1) * note_to_x_ratio_total)
